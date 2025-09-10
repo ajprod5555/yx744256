@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>title</title>
+    <!--<link href="style.css" rel="stylesheet">-->
+  <link href="style.css" rel="stylesheet">
+  </head>
+  <body x-data x-init="() => { window['$router'] = $router; $router.config({ mode: 'hash' }) }">
+    <!-- <div id="app"></div> -->
+    
+    <!--<> //:: _h -->
+    <template x-component="index">
+      <x->
+        <li><a href="#/">default</a></li>
+        <li><a href="#/att">att</a></li>
+        <x-route-default></x-route-default>
+        <x-route-att></x-route-att>
+      </x->
+    </template>
+    
+    <template x-component="route-default">
+      <x->
+        <template x-route="/">
+          <div>
+            .. ..2 & ..
+          </div>
+        </template>
+      </x->
+    </template>
+    
+    <template x-component="route-att">
+      <x->
+        <template x-route="/att">
+          <div>
+            <x-att></x-att>
+          </div>
+        </template>
+      </x->
+    </template>
+    
+    <template x-component="att">
+      <x->
+        att!
+      </x->
+    </template>
+    
+    <template x-component="tl">
+      <x->
+        tl!
+      </x->
+    </template>
+    <!--<> //:: _h -->
+    
+    
+    <!--<> //:: _h -->
+    <!--
+     ! .. ..2 ..
+     !-->
+    <template x-component="t5">
+      <x->
+        t5!
+      </x->
+    </template>
+    <!--<> //:: _h -->
+    
+<x-index></x-index>
+  <script src="script.js"></script>
+  </body>
+</html>
